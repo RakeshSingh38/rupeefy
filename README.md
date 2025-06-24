@@ -3,11 +3,11 @@
 </div>
 
 <div align="center">
-<h1>Currencee</h1>
+<h1>Rupeefy</h1>
 <p>A trusted and most popular Currenct exchange tool</p> 
 </div>
 
-<img src="/public/image.png" alt="Currencee" width="100%">
+<img src="/public/image.png" alt="Rupeefy" width="100%">
 
 <br />
 
@@ -17,7 +17,7 @@ This project utilizes a simple nodejs express backend which is hosted on Vercel
 to hide the API credentials. To run the project locally, follow the steps below:
 
 -   First generate your own API keys from
-    [Currencybeacon](https://currencybeacon.com?ref=https://currencee.pro)
+    [Currencybeacon](https://currencybeacon.com?ref=https://Rupeefy.pro)
 -   Rename `.env.example` in the `server` directory to `.env`
 -   Insert your API keys , make sure there's no space between the `=` sign and
     the value, e.g. `API_KEY=your_api_key_here`

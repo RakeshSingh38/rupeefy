@@ -119,11 +119,11 @@ export default function App() {
 
         document.title = `${Number(
             amount
-        ).toLocaleString()} ${result?.from.toUpperCase()} to ${result?.to.toUpperCase()} Conversion - Currencee`;
+        ).toLocaleString()} ${result?.from.toUpperCase()} to ${result?.to.toUpperCase()} Conversion - Rupeefy`;
 
         return () => {
             document.title =
-                "Currencee | The World's Most Trusted and Secure Currency Conveter";
+                "Rupeefy | The World's Most Trusted and Secure Currency Conveter";
         };
     }, [amount, result]);
 
