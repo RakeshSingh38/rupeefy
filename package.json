@@ -1,16 +1,13 @@
 {
-  "name": "Rupeefy",
+  "name": "currencee",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build:frontend": "vite build",
-    "build:backend": "cd server && npm install && npm start",
-    "build": "npm run build:frontend && npm run build:backend",
-    "preview": "vite preview",
+    "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
-    "backend": "cd server && npm start"
+    "preview": "vite preview"
   },
   "dependencies": {
     "cors": "^2.8.5",
