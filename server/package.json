@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon index.js",
-    "start:backend": "cd server && npm start"
+    "start": "node index.js",
+    "start:backend": "npm start"
   },
   "keywords": [],
   "author": "",
