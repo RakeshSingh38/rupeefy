@@ -4,7 +4,7 @@
 
 <div align="center">
 <h1>Rupeefy</h1>
-<p>A trusted and most popular Currenct exchange tool</p> 
+<p>A trusted and popular currency exchange tool for real-time conversions</p> 
 </div>
 
 <img src="/public/image.png" alt="Rupeefy" width="100%">
