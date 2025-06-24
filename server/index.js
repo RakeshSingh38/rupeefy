@@ -1,16 +1,24 @@
 import { createRequire } from "module";
 import express from "express";
 import cors from "cors";
+import path from "path";
+import { fileURLToPath } from "url";
 
 const require = createRequire(import.meta.url);
 require("dotenv").config();
 
-const PORT = process.env.PORT || 5000;
 const app = express();
+const PORT = process.env.PORT || 5000;
+
+// Serve frontend build files
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const frontendPath = path.join(__dirname, "../dist");
 
 app.use(cors());
+app.use(express.static(frontendPath));
 
-// API request to handle list of currencies
+// API route: /currencies
 app.get("/currencies", async (req, res) => {
   try {
     const response = await fetch(
@@ -23,7 +31,7 @@ app.get("/currencies", async (req, res) => {
   }
 });
 
-// Server-side API request to handle currency conversion
+// API route: /convert
 app.get("/convert", async (req, res) => {
   const { base, foreign, amount } = req.query;
 
@@ -42,6 +50,11 @@ app.get("/convert", async (req, res) => {
   }
 });
 
+// Fallback: send index.html for any unknown routes (React Router support)
+app.get("*", (req, res) => {
+  res.sendFile(path.join(frontendPath, "index.html"));
+});
+
 app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
+  console.log(`Server running at http://localhost:${PORT}`);
 });
